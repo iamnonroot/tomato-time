@@ -1,7 +1,13 @@
 # Tomato Time
 Pomodoro time technique with flutter :smile:  
 
-[Download APK](https://github.com/iamnonroot/tomato-time/releases)
+[Download APK](https://github.com/iamnonroot/tomato-time/releases) - [Donte Me](https://iamroot.ir/donate?from=github)
+
+## Languages
+<div class="languages">
+<img src="lib/assets/languages/iran.png" alt="Iran Flag" title="Persian/Farsi/فارسی" width="50px">
+<img src="lib/assets/languages/usa.png" alt="USA Flag" title="English" width="50px">
+</div>
 
 ## Screenshots
 <div class="screenshots">
