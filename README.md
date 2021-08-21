@@ -3,6 +3,14 @@ Pomodoro time technique with flutter :smile:
 
 ## Screenshots
 
+<style>
+    div.screenshots {
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+
+<div class="screenshots">
 <img src="docs/assets/splash-wellcome.png" alt="Splash wellcome" width="200px">
 <img src="docs/assets/splash-example.png" alt="Splash example" width="200px">
 <img src="docs/assets/pomodoro-form.png" alt="Pomodoro form" width="200px">
@@ -12,3 +20,4 @@ Pomodoro time technique with flutter :smile:
 <img src="docs/assets/change-language.png" alt="Change language" width="200px">
 <img src="docs/assets/pomodoro-page.png" alt="Pomodoro page" width="200px">
 <img src="docs/assets/pomodoro-started.png" alt="Pomodoro started" width="200px">
+</div>
