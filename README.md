@@ -1,16 +1,17 @@
-# pomodoro
+# Tomato Time
+Pomodoro time technique with flutter :smile:
 
-A new Flutter project.
+## Screenshots
+<div style="display: flex; flex-wrap: nowrap; overflow-y: hidden; overflow-x: scroll;">
 
-## Getting Started
+<img src="docs/assets/splash-wellcome.png" alt="Splash wellcome" style="width: 200px; margin: 5px;">
+<img src="docs/assets/splash-example.png" alt="Splash example" style="width: 200px; margin: 5px;">
+<img src="docs/assets/pomodoro-form.png" alt="Pomodoro form" style="width: 200px; margin: 5px;">
+<img src="docs/assets/pomodoro-preview.png" alt="Pomodoro preview" style="width: 200px; margin: 5px;">
+<img src="docs/assets/home.png" alt="Home" style="width: 200px; margin: 5px;">
+<img src="docs/assets/settings.png" alt="Settings" style="width: 200px; margin: 5px;">
+<img src="docs/assets/change-language.png" alt="Change language" style="width: 200px; margin: 5px;">
+<img src="docs/assets/pomodoro-page.png" alt="Pomodoro page" style="width: 200px; margin: 5px;">
+<img src="docs/assets/pomodoro-started.png" alt="Pomodoro started" style="width: 200px; margin: 5px;">
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+</div>
