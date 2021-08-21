@@ -2,14 +2,6 @@
 Pomodoro time technique with flutter :smile:
 
 ## Screenshots
-
-<style>
-    div.screenshots {
-        display: flex;
-        flex-wrap: wrap;
-    }
-</style>
-
 <div class="screenshots">
 <img src="docs/assets/splash-wellcome.png" alt="Splash wellcome" width="200px">
 <img src="docs/assets/splash-example.png" alt="Splash example" width="200px">
