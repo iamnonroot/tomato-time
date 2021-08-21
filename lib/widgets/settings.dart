@@ -33,7 +33,8 @@ class _SettingsBottomSheetWidgetState extends State<SettingsBottomSheetWidget> {
     String? locale = await storage.getItem('locale');
 
     setState(() {
-      language = languages.firstWhere((item) => item.code == locale);
+      language = languages
+          .firstWhere((item) => item.code == (locale == null ? 'en' : locale));
     });
   }
 
