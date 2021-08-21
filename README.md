@@ -1,5 +1,7 @@
 # Tomato Time
-Pomodoro time technique with flutter :smile:
+Pomodoro time technique with flutter :smile:  
+
+[Download APK](https://github.com/iamnonroot/tomato-time/releases)
 
 ## Screenshots
 <div class="screenshots">
