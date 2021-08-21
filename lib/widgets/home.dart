@@ -75,7 +75,7 @@ class _HomeState extends State<Home> {
   }
 
   void openDonatePage() async {
-    String url = 'https://iamroot.ir/donate?from=pomodoro';
+    String url = 'https://iamroot.ir/donate?from=tomoto-time';
     setState(() => showMenu = false);
     if (await canLaunch(url)) await launch(url);
   }
