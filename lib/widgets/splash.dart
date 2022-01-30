@@ -263,12 +263,17 @@ class _SplashScreenState extends State<SplashScreen> {
       label: step <= 1
           ? Icon(
               step <= 1 ? Icons.arrow_forward : Icons.add,
+              color: Colors.black,
             )
-          : CustomText(AppLocalizations.of(context)!.add_pomodoro),
+          : CustomText(
+              AppLocalizations.of(context)!.add_pomodoro,
+              color: Colors.black,
+            ),
       icon: step <= 1
           ? null
           : Icon(
               Icons.add,
+              color: Colors.black,
             ),
     );
   }

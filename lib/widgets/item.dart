@@ -76,7 +76,6 @@ class _ItemState extends State<Item> with TickerProviderStateMixin {
   @override
   void dispose() {
     super.dispose();
-    print('DISPOS');
   }
 
   void askUserForForm(BuildContext context) {
@@ -145,7 +144,6 @@ class _ItemState extends State<Item> with TickerProviderStateMixin {
           print('Ended');
         }),
       );
-      print('Setting time ...');
       if (timerData!.progress == 0) {
         if (i + 1 < timeItems.length) {
           i = i + 1;
@@ -178,9 +176,9 @@ class _ItemState extends State<Item> with TickerProviderStateMixin {
     );
   }
 
-  void stop() {
+  void stop() async {
     setDefault();
-    notification.delete();
+    await notification.delete();
     pomodoro.stop();
     setState(() {
       timer!.cancel();
@@ -190,7 +188,6 @@ class _ItemState extends State<Item> with TickerProviderStateMixin {
   void startTimer() {
     setState(() {
       timer = Timer.periodic(Duration(minutes: 1), (_) {
-        print('1 Minute');
         setTimerData();
       });
     });
@@ -222,6 +219,7 @@ class _ItemState extends State<Item> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return CustomScaffoldOf(
       willPop: dateTime == null,
+      brightness: dateTime == null ? Brightness.light : Brightness.dark,
       child: Scaffold(
         backgroundColor: Colors.red,
         body: Stack(
@@ -345,7 +343,7 @@ class _ItemState extends State<Item> with TickerProviderStateMixin {
     return Expanded(
       child: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (overscroll) {
-          overscroll.disallowGlow();
+          overscroll.disallowIndicator();
           return false;
         },
         child: ListView(
@@ -400,11 +398,16 @@ class _ItemState extends State<Item> with TickerProviderStateMixin {
             dateTime == null
                 ? AppLocalizations.of(context)!.start
                 : AppLocalizations.of(context)!.end,
-            color: Colors.white,
+            color: Colors.black,
           ),
           style: ButtonStyle(
             elevation: MaterialStateProperty.all(0),
             backgroundColor: MaterialStateProperty.all(Colors.amber),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+            ),
           ),
         ),
       ),

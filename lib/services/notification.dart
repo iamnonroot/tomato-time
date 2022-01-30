@@ -41,8 +41,6 @@ Future<void> show({
   required String subtitle,
   int minute = 1,
 }) async {
-  print(minute);
-
   await flutterLocalNotificationsPlugin.zonedSchedule(
     id,
     title,

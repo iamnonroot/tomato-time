@@ -107,7 +107,7 @@ class _PomodoroFormState extends State<PomodoroForm> {
         padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
         child: NotificationListener<OverscrollIndicatorNotification>(
           onNotification: (overscroll) {
-            overscroll.disallowGlow();
+            overscroll.disallowIndicator();
             return false;
           },
           child: ListView(
@@ -155,7 +155,7 @@ class _PomodoroFormState extends State<PomodoroForm> {
     return Expanded(
       child: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (overscroll) {
-          overscroll.disallowGlow();
+          overscroll.disallowIndicator();
           return false;
         },
         child: ListView(
@@ -261,7 +261,10 @@ class _PomodoroFormState extends State<PomodoroForm> {
       label: CustomText(
         AppLocalizations.of(context)!.submit,
       ),
-      icon: Icon(Icons.done),
+      icon: Icon(
+        Icons.done,
+        color: Colors.black,
+      ),
     );
   }
 }

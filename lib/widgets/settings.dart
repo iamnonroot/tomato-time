@@ -20,7 +20,7 @@ class SettingsBottomSheetWidget extends StatefulWidget {
 class _SettingsBottomSheetWidgetState extends State<SettingsBottomSheetWidget> {
   bool openedModal = false;
 
-  late ILanguage? language;
+  ILanguage? language;
 
   @override
   void initState() {
@@ -29,12 +29,13 @@ class _SettingsBottomSheetWidgetState extends State<SettingsBottomSheetWidget> {
     init();
   }
 
-  void init() async {
+  Future<void> init() async {
     String? locale = await storage.getItem('locale');
 
     setState(() {
-      language = languages
-          .firstWhere((item) => item.code == (locale == null ? 'en' : locale));
+      language = languages.firstWhere(
+        (item) => item.code == (locale == null ? 'en' : locale),
+      );
     });
   }
 
@@ -72,7 +73,7 @@ class _SettingsBottomSheetWidgetState extends State<SettingsBottomSheetWidget> {
             title: AppLocalizations.of(context)!.settings,
             content: AppLocalizations.of(context)!.settings_subtitle,
           ),
-          _LanguageItem(),
+          language == null ? Container() : _LanguageItem(),
         ],
       ),
     );

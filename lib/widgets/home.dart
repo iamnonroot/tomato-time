@@ -75,7 +75,7 @@ class _HomeState extends State<Home> {
   }
 
   void openDonatePage() async {
-    String url = 'https://iamroot.ir/donate?from=tomoto-time';
+    String url = 'https://zarinp.al/iamnonroot';
     setState(() => showMenu = false);
     if (await canLaunch(url)) await launch(url);
   }
@@ -180,7 +180,7 @@ class _HomeState extends State<Home> {
 
       return NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (overscroll) {
-          overscroll.disallowGlow();
+          overscroll.disallowIndicator();
           return false;
         },
         child: ListView(
@@ -204,6 +204,7 @@ class _HomeState extends State<Home> {
       label: CustomText(AppLocalizations.of(context)!.add_pomodoro),
       icon: Icon(
         Icons.add,
+        color: Colors.black,
       ),
     );
   }

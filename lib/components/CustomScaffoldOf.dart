@@ -5,12 +5,14 @@ class CustomScaffoldOf extends StatelessWidget {
   final Widget child;
   final bool willPop;
   final Function? onWillPop;
+  final Brightness brightness;
 
   const CustomScaffoldOf({
     Key? key,
     required this.child,
     this.willPop = false,
     this.onWillPop,
+    this.brightness = Brightness.light,
   }) : super(key: key);
 
   @override
@@ -27,8 +29,8 @@ class CustomScaffoldOf extends StatelessWidget {
         value: SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
           systemNavigationBarColor: Colors.white,
-          statusBarIconBrightness: Brightness.dark,
-          systemNavigationBarIconBrightness: Brightness.dark,
+          statusBarIconBrightness: this.brightness,
+          systemNavigationBarIconBrightness: this.brightness,
         ),
         child: child,
       ),

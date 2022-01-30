@@ -64,28 +64,48 @@ class ConfirmBottomSheetWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: CustomText(
-              no,
-              fontSize: 14,
+          SizedBox(
+            width: 85,
+            height: 42,
+            child: TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: CustomText(
+                no,
+                fontSize: 14,
+              ),
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                ),
+              ),
             ),
           ),
           SizedBox(
             width: 12,
           ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-              callback();
-            },
-            child: CustomText(
-              yes,
-              fontSize: 14,
-            ),
-            style: ButtonStyle(
-              elevation: MaterialStateProperty.all(0),
-              backgroundColor: MaterialStateProperty.all(Colors.amber),
+          SizedBox(
+            width: 120,
+            height: 42,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+                callback();
+              },
+              child: CustomText(
+                yes,
+                fontSize: 14,
+              ),
+              style: ButtonStyle(
+                elevation: MaterialStateProperty.all(0),
+                backgroundColor: MaterialStateProperty.all(Colors.amber),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                ),
+              ),
             ),
           )
         ],

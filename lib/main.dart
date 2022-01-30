@@ -51,9 +51,11 @@ MaterialApp materialApp({
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,
     theme: ThemeData(
-      primaryColor: Colors.red,
-      accentColor: Colors.amber,
       fontFamily: locale.languageCode,
+      colorScheme: ColorScheme.fromSwatch().copyWith(
+        primary: Colors.red,
+        secondary: Colors.amber,
+      ),
     ),
     initialRoute: 'splash',
     onGenerateRoute: (RouteSettings settings) {
